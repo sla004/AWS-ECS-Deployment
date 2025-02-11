@@ -25,8 +25,8 @@ This repository provides the Terraform configuration to deploy and manage the Fo
 2. **Deployment**
    * Set AWS credentials:
        ```bash
-       export AWS_ACCESS_KEY_ID=your_access_key
-       export AWS_SECRET_ACCESS_KEY=your_secret_key
+       export AWS_ACCESS_KEY_ID
+       export AWS_SECRET_ACCESS_KEY
        ```
    * Deploy core infrastructure:
       > This step provisions the VPC, ECS Cluster and Cloud Map. 
@@ -41,9 +41,9 @@ This repository provides the Terraform configuration to deploy and manage the Fo
       * Generate values for `NEXTAUTH_SECRET` and `ENCRYPTION_KEY`: `openssl rand -hex 32`
       * Apply changes, providing configuration values:
            ```bash
-           terraform apply -var "DATABASE_URL=your_db_connection_string" \
-                           -var "NEXTAUTH_SECRET=your_nextauth_secret" \
-                           -var "ENCRYPTION_KEY=your_encryption_key"
+           terraform apply -var "DATABASE_URL" \
+                           -var "NEXTAUTH_SECRET" \
+                           -var "ENCRYPTION_KEY"
            ```
       * More detailed instructions can be found [here](./terraform/webapp-service/README.md).       
 3. **Access your application**  

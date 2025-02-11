@@ -8,16 +8,16 @@
 # 2. Replace placeholders "your-organization-name" and "your-workspace-name" with your actual Terraform Cloud organization and workspace names.
 # 3. Refer to the Terraform Cloud documentation for details: https://developer.hashicorp.com/terraform/cloud-docs/overview
 
-/*
+
 terraform {
   cloud {
-    organization = "your-organization-name"
+    organization = "kumura"
     workspaces {
-      name = "your-workspace-name"
+      name = "kumura"
     }
   }
 }
-*/
+
 
 locals {
   name           = "webapp-formbricks"
@@ -222,7 +222,7 @@ module "alb" {
     }
 
     # Uncomment the following code block to enable HTTPS
-    /*
+
     all_https = {
       from_port   = 443
       to_port     = 443
@@ -230,7 +230,6 @@ module "alb" {
       description = "HTTPS web traffic"
       cidr_ipv4   = "0.0.0.0/0"
     }
-    */
   }
 
 
@@ -252,7 +251,6 @@ module "alb" {
     }
 
     # Uncomment the following code block to enable HTTPS
-    /*
     https = {
       port            = 443
       protocol        = "HTTPS"
@@ -261,7 +259,6 @@ module "alb" {
         target_group_key = "ecs-task"
       }
     }
-    */
   }
 
   target_groups = {

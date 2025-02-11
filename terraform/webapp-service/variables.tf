@@ -1,6 +1,6 @@
 variable "region" {
   type    = string
-  default = "us-east-1"
+  default = "eu-north-1"
 }
 
 variable "TF_VAR_container_image" {
@@ -24,7 +24,6 @@ variable "NEXTAUTH_SECRET" {
 }
 
 # Optional: Uncomment and replace with your with AWS Secrets Manager ARN in ECS Task for sharing sensitive data
-/*
 variable "secrets_manager_data" {
   type = map(string)
   default = {
@@ -33,4 +32,3 @@ variable "secrets_manager_data" {
     "DATABASE_URL"           = "DATABASE_URL"
   }
 }
-*/

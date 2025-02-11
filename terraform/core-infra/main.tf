@@ -8,17 +8,17 @@
 # 2. Replace placeholders "your-organization-name" and "your-workspace-name" with your actual Terraform Cloud organization and workspace names.
 # 3. Refer to the Terraform Cloud documentation for details: https://developer.hashicorp.com/terraform/cloud-docs/overview
 
-/*
+
 terraform {
   cloud {
-    organization = "your-organization-name"
+    organization = "kumura"
 
     workspaces {
-      name = "your-workspace-name"
+      name = "kumura"
     }
   }
 }
-*/
+
 
 ################################################################################
 # Core Infrastructure Locals

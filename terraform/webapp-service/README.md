@@ -65,8 +65,8 @@ Formbricks documentation provides further details: [https://formbricks.com/docs/
     * Change directory to `terraform/webapp-formbricks`
 2. **Set AWS Credentials**
    ```shell
-   export AWS_ACCESS_KEY_ID=your_access_key
-   export AWS_SECRET_ACCESS_KEY=your_secret_key
+   export AWS_ACCESS_KEY_ID
+   export AWS_SECRET_ACCESS_KEY
    ```
 3. **Initialize Terraform**
    ```shell
@@ -82,9 +82,9 @@ Formbricks documentation provides further details: [https://formbricks.com/docs/
 6. **Review and Apply Changes (choose either environment variables or Secrets Manager)**  
     Using Environment Variables:
     ```shell
-    terraform apply -var "DATABASE_URL=your_db_connection_string" \
-                    -var "NEXTAUTH_SECRET=your_nextauth_secret" \
-                    -var "ENCRYPTION_KEY=your_encryption_key"
+    terraform apply -var "DATABASE_URL" \
+                    -var "NEXTAUTH_SECRET" \
+                    -var "ENCRYPTION_KEY"
     ```
     Using Secrets Manager:
     ```shell
